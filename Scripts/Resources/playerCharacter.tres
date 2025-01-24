@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cb1xnc7orau5m"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/skeleton.gd" id="1_f801u"]
+
+[resource]
+script = ExtResource("1_f801u")
+HP = 30
+DEF = 5
+AGL = 2
+ATK = 5
+skillList = Array[String](["Attack", "Defend", "Buff ATK", "killBuffs", "Buff AGL", "Buff DEF"])
+name = "Carlos"

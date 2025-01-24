@@ -1,0 +1,46 @@
+[gd_scene load_steps=13 format=3 uid="uid://vmhrckx53jnr"]
+
+[ext_resource type="FontFile" uid="uid://btxnlqq1r4rxl" path="res://Fonte/m5x7 (1).ttf" id="1_w0yqk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pbce0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ox5oj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ysrkj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbk7o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fu1ue"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hkms"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ev7c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ln7id"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q1u61"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl7bw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3sb4o"]
+
+[node name="SkillButton" type="Button"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_w0yqk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pbce0")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ox5oj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ysrkj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tbk7o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fu1ue")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5hkms")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ev7c")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ln7id")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q1u61")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_fl7bw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3sb4o")
+text = "Even Flow"

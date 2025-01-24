@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://wkv284kasrse"]
+[gd_scene load_steps=13 format=4 uid="uid://wkv284kasrse"]
 
 [ext_resource type="Texture2D" uid="uid://cjyue4povqhr7" path="res://Sprites/tileset_legacy.png" id="1_tcg3u"]
 [ext_resource type="Script" path="res://Scripts/Players/player.gd" id="2_nkkkt"]
@@ -2225,6 +2225,8 @@ sources/0 = SubResource("TileSetAtlasSource_ib3dk")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_top3q"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rye54"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_b78r6"]
 radius = 5.09902
 
@@ -2271,6 +2273,12 @@ shape = SubResource("RectangleShape2D_top3q")
 position = Vector2(8, 8)
 target_position = Vector2(0, 16)
 
+[node name="Area2D" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_rye54")
+
 [node name="Enemy" type="CharacterBody2D" parent="."]
 motion_mode = 1
 script = ExtResource("3_4pngy")
@@ -2289,3 +2297,12 @@ debug_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 shape = SubResource("CircleShape2D_b78r6")
+
+[node name="Area2D" type="Area2D" parent="Enemy" groups=["Enemy"]]
+position = Vector2(-8, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_rye54")
+
+[connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]

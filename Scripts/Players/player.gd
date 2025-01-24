@@ -61,3 +61,8 @@ func can_move_to(position: Vector2, direction: Vector2) -> bool:
 			return false
 
 	return true
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if(area.is_in_group("Enemy")):
+		get_tree().change_scene_to_file("res://Cenas/battle.tscn")
